@@ -1,0 +1,62 @@
+nav: 
+  en: Know-how
+  de: Know-how 
+heading: 
+  en: Our Expertise
+  de: Unsere Expertise
+lead: 
+  en: High-quality computer graphics implies profound know-how and programming close to hardware.
+  de: Hochqualitative Computergrafik impliziert fundiertes Wissen und hardwarenahe Programmierung.
+
+core_rcg: # real-time computer graphics
+  heading: 
+    en: Computer Graphics
+    de: Computergrafik
+  image: core-rcg
+  text: 
+    en: 'With years of experience in real-time computer graphics we push state-of-the-art and provide know-how and solutions with emphasis on:'
+    de: 'Mit langjähriger Erfahrung in Echtzeit-Computergrafik treiben wir State of the Art voran und bieten Know-how und Lösungen mit folgenden Schwerpunkten:'
+  skills:
+    en: [
+      "OpenGL, OpenGL ES, WebGL, and Vulkan",
+      "2D and 3D Computer Graphics",
+      "Real-time Rendering Techniques",
+      "Mobile, Desktop, and server-based Systems",
+      "Virtual Reality (HTC, Oculus)",
+      "Engines: Unity, Unreal",
+      "Information Visualization",
+      "Hardware-accelerated Computing (GPGPU)" ]
+    de: [ 
+      "OpenGL, OpenGL ES, WebGL, und Vulkan",
+      "2D und 3D Computergrafik",
+      "Real-time Renderingtechniken",
+      "Mobil, Desktop, und serverbasierte Systeme",
+      "Virtual Reality (HTC, Oculus)",
+      "Engines: Unity, Unreal",
+      "Informationsvisualisierung",
+      "Hardwarebeschleunigtes Computing (GPGPU)" ]
+
+core_cpp: # c plus plus
+  heading: 
+    en: C++ Development
+    de: C++ Entwicklung
+  image: core-cpp
+  text: 
+    en: 'We are specialized in tailoring frameworks, tools, apps, and web services. Our solutions are clean, maintainable, reliable, and cross-platform.'
+    de: 'Wir sind spezialisiert im Maßschneidern von Frameworks, Tools, Apps und Web Services. Unsere Lösungen sind wartbar, verlässlich und plattformübergreifend.'
+  skills:
+    en: [ Modern C++11/14/17/20,
+      Cross-platform C++ Development,
+      Library and Application Design,
+      CMake Project Setup and Deployment,
+      Qt-based Development,
+      Low-level Optimization and Parallelization,
+      Software Development Paradigms ]
+    de: [ Modernes C++11/14/17/20,
+      Cross-platform C++ Entwicklung,
+      Bibliotheks- und Anwendungsdesign,
+      CMake Projekt Setup und Deployment,
+      Qt-basierte Entwicklung,
+      Low-level Optimierung und Parallelisierung,
+      Paradigmen der Softwareentwicklung ]
+

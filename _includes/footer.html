@@ -1,0 +1,9 @@
+ {% assign footer = site.data.footer %} {% capture index_url %}{{ site.baseurl }}/{{ page.lang}}/{% endcapture %}
+
+<footer class="text-center">Copyright &copy; 2015&thinsp;&ndash;&thinsp;{{ site.time | date: "%Y" }} CG Internals
+    <br>
+    <small>{% if page.static == true %}{{ footer.endangered[page.lang] }} {% endif %}
+        <a href="{{ index_url }}privacy-policy.html">{{ footer.privacy[page.lang] }}</a>
+    </small>
+</footer>
+<data hidden value="{{ site.data.gitrev.revision }}">revision</data>

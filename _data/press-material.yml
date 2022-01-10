@@ -1,0 +1,60 @@
+heading: 
+  en: Press Material
+  de: Pressematerial
+lead: 
+  en: We invite you to download photos, logos and infographics. If you would like to speak to us personally, please refer to our contact details.
+  de: Wir laden Sie ein Fotos, Logos und Infografiken herunter zu laden. Gern können Sie uns über unsere Kontaktkoordinaten persönlich ansprechen.
+
+photo_download: 
+  en: Download High Res Image
+  de: Hochauflösendes Bild herunterladen
+
+logo_download: 
+  en: Download Logo Pack (SVGs, PNGs)
+  de: Logopaket (SVGs, PNGs) herunterladen
+
+logos:
+  - title: 
+      en: Company Logo
+      de: Firmenlogo
+    alt: 
+      en: CG Internals Logo
+      de: CG Internals Logo
+    description: 
+      en: 'Copyright &copy; 2015-2017 CG Internals, created by Daniel Limberger. Main logo for most use cases (e.g., horizontal placement).'
+      de: 'Copyright &copy; 2015-2017 CG Internals GmbH, erstellt von Daniel Limberger. Hauptlogo für normale Verwendung (z.B. horizontale Platzierung).'
+
+    color: cginternals_logo_header
+    black: cginternals_logo_header_black
+    greyscale: cginternals_logo_header_greyscale
+    package: cginternals_logo_header.zip
+    col: [ 10, 1 ]
+
+  - title: 
+      en: Company Logo (Block)
+      de: Firmenlogo (Block)
+    alt: 
+      en: CG Internals Logo (Block)
+      de: CG Internals Logo (Block)
+    description: 
+      en: 'Copyright &copy; 2015-2017 CG Internals, created by Daniel Limberger. Block logo for use as avatar/profile image.'
+      de: 'Copyright &copy; 2015-2017 CG Internals GmbH, erstellt von Daniel Limberger. Logo für Verwendung als Profilbild.'
+
+    color: cginternals_logo_profile
+    black: cginternals_logo_profile_black
+    greyscale: cginternals_logo_profile_greyscale
+    package: cginternals_logo_profile.zip
+    col: [ 3, 0 ]
+
+photos: 
+  - title: 
+      en: Photo of the Founders
+      de: Foto der Gründer
+    alt: 
+      en: Founders Portrait
+      de: Gründerportrait
+    description: 
+      en: 'Copyright &copy; 2016 Kathleen Friedrich, Potsdam, Germany, f.l.t.r.: Stefan Buschmann, Daniel Limberger, and Willy Scheibel.'
+      de: 'Copyright &copy; 2016 Kathleen Friedrich, Potsdam, v.l.n.r.: Stefan Buschmann, Daniel Limberger, and Willy Scheibel.'
+    small: daniel-stefan-willy-founders-sm.jpg
+    large: daniel-stefan-willy-founders.jpg

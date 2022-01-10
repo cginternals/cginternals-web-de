@@ -1,0 +1,49 @@
+---
+
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  {% assign meta = site.data.posts %}
+
+  <title>{{ site.title | xml_escape }} | {% if page.context %}{{ meta[page.context].heading[page.lang] | escape }}{% else %}{{ meta.heading[page.lang] | escape }}{% endif %}</title>
+  <link href="{{ site.url }}{{ page.url }}" rel="self" />
+  <link href="{{ site.url }}" />
+  <id>{{ site.url }}{{ page.url }}</id>
+  <updated>{{ "now" | date_to_xmlschema }}</updated>
+
+  {% assign post_layout_filter = page.context | append: '-post' %}
+  {% for post in site.posts %}
+
+    {% if post.url and post.lang == page.lang %}
+    {% unless page.context and post.layout != post_layout_filter %}
+
+  <entry>
+    <title>{{ post.title | xml_escape }}</title>
+    <link href="{{ site.url }}{{ post.url }}" />
+    <id>{{ site.url }}{{ post.url }}</id>
+    <updated>{{ post.date  | date_to_xmlschema }}</updated>
+
+    {% if post.author %}
+    {% assign author = meta.authors[post.author] %}
+    <author>
+      <name>{{ author.first_name }} {{ author.last_name }}</name>
+      <email>{{ author.email[page.lang] }}</email>
+    </author>
+    {% endif %}
+
+    {% if post.abstract %}
+    <summary>{{ post.abstract | strip_html | xml_encode }}</summary>
+    {% else %}
+    <summary>{{ post.content | strip_html | xml_encode | truncatewords:44 }}</summary>
+    {% endif %}
+
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        {{ post.content }}
+      </div>
+    </content>
+
+  </entry>
+  {% endunless %} {% endif %} {% endfor %}
+
+</feed>

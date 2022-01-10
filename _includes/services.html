@@ -1,0 +1,24 @@
+{% assign services = site.data.services %}
+
+<div class="row text-center">
+  <div class="col-12">
+    <h1>{{ services.heading[page.lang] | escape }}</h1>
+    <p class="lead">{{ services.lead[page.lang] | escape }}</p>
+  </div>
+</div>
+
+<div class="row">
+
+  {% for service in services.services %}
+  <div class="col-md-4 offset-md-0 col-10 offset-1 mb-4">
+    <figure class="figure">
+      <img class="figure-img img-fluid" src="{{ site.baseurl }}/img/{{ service.stock }}.min.png" alt="{{ service.stock }}">
+    </figure>   
+    <h4>{{ service.title[page.lang] }}</h4>
+    <p>{{ service.text[page.lang] }}</p>
+    {% comment %}<p class="text-right">{{ service.price-tag[page.lang] }}</p>{% endcomment %}
+    <p class="text-right"><a href="mailto:{{ service.cta-mailto }}"><i class="icon-{{ service.cta-icon }}"></i>&thinsp;{{ service.cta[page.lang] }}</a></p>
+  </div>
+  {% endfor %}
+
+</div>

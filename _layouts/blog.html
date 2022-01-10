@@ -1,0 +1,24 @@
+---
+layout: compress
+---
+{% assign layout = 'blog' %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+{% include head.html %}
+
+<body id="page-top">
+
+{% include navbar.html %}
+
+<section id="posts" class="container">
+	{% include blog-posts.html %}
+</section>
+
+{% include footer.html %}
+
+{% include scripts-3rdp.html %}
+
+</body>
+</html>

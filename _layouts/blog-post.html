@@ -1,0 +1,66 @@
+--- 
+layout: compress 
+--- 
+
+{% assign layout = 'blog-post' %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+{% include head.html %}
+
+<body id="page-top">
+
+  {% include navbar.html %} 
+  {% assign meta = site.data.posts %} 
+
+  {% assign m = page.date | date: "%-m" | minus: 1 %} 
+  {% assign day = page.date | date: "%d" %} 
+  {% assign month = months[m] %}
+  {% assign year = page.date | date: "%Y" %}
+
+  {% assign author = meta.authors[page.author] %}
+
+  {% capture author_name %}{{ author.first_name }} {{ author.last_name }}{% endcapture %}
+  {% capture date_published %}{{ day }}. {{ meta.months[page.lang][m] }} {{ year }}{% endcapture %}
+
+  {% capture read_time %}{% assign words = content | number_of_words %}{{ words | divided_by:200 }}{% if words < 400 %} min{% else %} mins{% endif %}{% endcapture %}
+
+  <section id="post" class="container">
+
+    <div class="row pb-4">
+      <div class="col-lg-8 offset-lg-2 col-10 offset-1">
+        <h1 class="mb-3">{{ page.title }}</h1>
+        {% if page.title-figure-type == "png" %}
+        <p><img src="{{ site.baseurl }}{{ page.title-figure }}.min.png" alt="title figure" /></p>
+        {% elsif page.title-figure-type == "figure2bc" %}
+        {% assign fig_alt1 = page.title-figure-alt1 %}
+        {% assign fig_src1 = page.title-figure-src1 %}
+        {% assign fig_cap1 = page.title-figure-cap1 %}
+        {% assign fig_alt2 = page.title-figure-alt2 %}
+        {% assign fig_src2 = page.title-figure-src2 %}
+        {% assign fig_cap2 = page.title-figure-cap2 %}
+        {% include figure2bc.html %}
+        {% endif %}
+        <p>{{ page.abstract }}</p>
+        <hr>
+        <p class="py-0 my-0">By <a href="mailto:{{ author.email[page.lang] }}">{{ author_name }}</a>, {{ date_published }}.</p>
+        <small>Estimated read time: {{ read_time }} | Target audience: {{ page.target }}.</small>
+      </div>
+    </div>  
+
+    <div class="row mt-4">
+      <div class="col-lg-8 offset-lg-2 col-10 offset-1">
+
+        {{ content }}
+
+      </div>
+    </div>
+
+  </section>
+
+  {% include footer.html %} {% include scripts-3rdp.html %}
+
+</body>
+
+</html>

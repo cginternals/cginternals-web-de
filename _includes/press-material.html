@@ -1,0 +1,36 @@
+{% assign material = site.data.press-material %}
+
+<div class="row text-center">
+  <div class="col-lg-8 offset-lg-2 col-10 offset-1">
+    <h1>{{ material.heading[page.lang] | escape }}</h1>
+    <p class="lead">{{ material.lead[page.lang] | escape }}</p>
+  </div>
+</div>
+
+{% for photo in material.photos %}
+<div class="row">
+  <div class="col-lg-8 offset-lg-2 col-10 offset-1">
+    <h4>{{ photo.title[page.lang] }}</h4>
+    <img class="img-fluid center-block" src="{{ site.baseurl }}/img/{{ photo.small }}" alt="{{ photo.alt[page.lang] }}">
+    <p>{{ photo.description[page.lang] }} <a href="{{ site.baseurl }}/img/{{ photo.large }}">{{ material.photo_download[page.lang] }}.</a></p>
+  </div>
+</div>
+{% endfor %} 
+
+{% for logo in material.logos %}
+<div class="row">
+  <div class="col-lg-8 offset-lg-2  col-10 offset-1">
+    <h4>{{ logo.title[page.lang] }}</h4>
+  </div>
+  <div class="clearfix"></div>
+  <div class="col-lg-8 offset-lg-2  col-10 offset-1 press-logos">
+    {% assign svg_alt = "color" %}{% assign svg_src = logo.color %}{% include svg.html %}
+    {% assign svg_alt = "black" %}{% assign svg_src = logo.black %}{% include svg.html %}
+    {% assign svg_alt = "greyscale" %}{% assign svg_src = logo.greyscale %}{% include svg.html %}
+  </div>
+  <div class="clearfix"></div>
+  <div class="col-lg-8 offset-lg-2  col-10 offset-1">
+    <p>{{ logo.description[page.lang] }} <a href="{{ site.baseurl }}/img/{{ logo.package }}">{{ material.logo_download[page.lang] }}.</a></p>
+  </div>
+</div>
+{% endfor %}

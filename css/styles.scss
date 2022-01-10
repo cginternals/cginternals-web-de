@@ -1,0 +1,387 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+@charset "utf-8";
+
+@import "fonts";
+
+// variables override
+
+$brand-color-0: rgb(  0,  85, 124);
+$brand-color-1: rgb( 24, 109, 148);
+$brand-color-2: rgb( 52, 136, 173);
+$brand-color-3: rgb(129, 193, 220);
+$brand-color-4: rgb(187, 229, 243);
+$brand-color-5: rgb(238, 246, 254);
+
+$code-color: $brand-color-2;
+
+$primary:   $brand-color-0;
+$info:      $brand-color-2;
+
+$enable-flex: true;
+$enable-rounded: false;
+
+$headings-font-weight: 300;
+
+$font-weight-normal: 300;
+$font-weight-bold: 600;
+
+$brand-dark: $brand-color-1;
+$brand-light: $brand-color-4;
+$brand-primary: $brand-color-2;
+
+$link-color: $brand-color-2;
+$link-hover-color: $brand-color-3;
+$link-hover-decoration: none;
+
+$navbar-dark-color:       rgba(white, 0.8) !default;
+$navbar-dark-hover-color: rgba(white, 1.0) !default;
+
+$font-family-sans-serif: 'Source Sans Pro';
+$font-family-monospace: 'Source Code Pro';
+
+// Import customized bootstrap from `sass_dir` (defaults to `_sass`)
+
+@import "bootstrap-custom", "jekyll_pygments_github";
+
+// h1 {
+//   margin-top: 4rem;
+// }
+
+footer {
+  padding-top: 8rem;
+}
+
+section {
+  padding-top: 8rem;
+  // padding-top: 4rem;
+  // padding-bottom: 2rem;
+}
+
+p {
+  hyphens: auto;
+}
+
+body {
+  overflow-y: scroll; // always show scrollbar
+}
+
+footer {
+  margin-bottom: 1rem;
+}
+
+b, strong {
+  font-weight: $font-weight-bold;
+}
+
+.row {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+// nav
+
+.navbar {
+
+  background-color: $brand-color-1;
+
+  .dropdown-menu {
+    background-color: $brand-color-1;
+  }
+
+  @include media-breakpoint-up(md) {
+    #lang-select .nav-link {
+      padding-right: 0rem;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .navbar-nav#lang-select {
+      flex-direction: unset;     
+    }
+    #lang-select .nav-link {
+      padding-left: .5rem;
+    }
+  }
+
+  img {
+    height: 1.5rem;
+    width: auto;
+  }
+
+  .navbar-toggler {
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown-menu {
+    border: none;
+    right: 0;
+    left: auto;
+  }
+  .open > .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-divider {
+    border-top-color: $navbar-dark-color;
+  }
+
+  .dropdown-item {
+    color: $navbar-dark-color; 
+
+    @include hover-focus {
+      color: $navbar-dark-hover-color; 
+      background: none;
+    }  
+  }
+  .dropdown-item.active {
+    color: $navbar-dark-active-color; 
+    background: none;
+  }
+}
+ 
+// heading
+
+.demo-gl {
+  z-index: -1;
+}
+
+section#header {
+
+  @include media-breakpoint-down(sm) {
+    .nav {
+      display: block;
+    }
+  }
+
+  .nav-first {
+      @extend .ml-auto;
+  }
+  .nav-last {
+      @extend .mr-auto;
+  }
+
+  .carousel-inner {
+    overflow: visible;
+  }
+
+  .carousel-fade .carousel-item {
+    opacity: 0.0;
+    display: block;
+    transition: opacity .75s ease-in-out;
+  }
+
+  .carousel-item.subsequent {
+      position: absolute; 
+      top: 0px; 
+      width: 100%; 
+      height: 100%;
+  }
+
+  .carousel-fade .carousel-item.active {
+    opacity: 1.0;
+    display: block;
+  }
+
+}
+
+// about
+
+section#about {
+
+  ul {
+    list-style: none;
+    padding-left: 1rem;
+
+    li:before {
+      content: '\2013\2002';
+    }
+  }
+}
+
+
+// press
+
+section#press-material {
+
+  .img-fluid {
+    margin: 1rem 0; 
+  }
+
+  @include media-breakpoint-up(sm) {
+    .press-logos .img-fluid {
+      width: 33.3333%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
+}
+
+section#post .img-fluid, section#entry .img-fluid {
+  margin-bottom: 1rem;
+}
+
+section#post pre,section#entry pre {
+  font-size: $small-font-size;
+  border: none;
+  border-radius: 0;
+  border-left: $hr-border-width solid rgba(#343a40, 0.92);
+  padding: 0 0 0 .75rem;
+  margin: 0 0 1.5rem 0;
+  background: none;
+}
+
+hr {
+  border-top: 0.8px solid rgba(black, 0.1);
+}
+
+#team, #post, #entry, #posts {
+  figure, img {
+    max-width: 100%;
+  }
+}
+
+// services
+
+section#services {
+  .list-group-item {
+    border: none;
+    background: none;
+  } 
+}
+
+// team
+
+@include media-breakpoint-down(sm) {
+
+  #team figure {
+    margin-top: 2rem;
+  }
+}
+
+// contact
+
+section#contact {
+	margin-bottom: 4rem;
+}
+
+@include media-breakpoint-down(md) {
+  section#contact .row div {
+    margin-top: 0;
+    p {
+      text-align: center;
+    }
+  }
+}
+
+// opensource -> readme wrapper
+
+.readme {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+}
+
+section#opensource {
+  .project p {
+    @extend .my-4;
+    @extend .px-2;
+
+    font-size: 1.7rem;
+    a {
+      color: $gray-900;
+    }
+  }
+  .project img.img-fluid {
+    height: 2rem;
+    filter: saturate(0%);
+    &:hover  {
+      filter: none;   
+    }
+  } 
+  .project a:hover {
+    color: $brand-color-1;
+  }
+}
+
+// posts
+
+section#post, section#entry {
+
+  table {
+    @extend .table;
+    @extend .table-sm;
+    @extend .table-hover;
+
+    thead {
+      // @extend .thead-dark;
+      background-color: $brand-color-1;
+      color: $table-dark-color;
+    }
+    
+    th {
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  blockquote {
+    @extend .blockquote;
+  }
+
+  figure {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h4 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+} 
+
+.table th {
+  border-top: none;
+}
+
+#privacy-policy {
+
+  h1 {
+    text-align: center;
+  } 
+  h3, small {
+    margin-top: 2em;
+  }  
+  h4 {
+    margin-top: 1em;
+  }
+
+}
+
+
+
+/* https://gist.github.com/larrybotha/7881691
+ * 
+ * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
+ *
+ * [1] IE9
+ * [2] IE10+
+ */
+/* 1 */
+.ie9 img[src$=".svg"] {
+  width: 100%; 
+}
+
+/* 2 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src$=".svg"] {
+    width: 100%; 
+  }
+
+  #team figure, #services figure {
+    max-width: 100%;
+  }
+
+}

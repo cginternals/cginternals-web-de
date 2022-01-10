@@ -1,0 +1,28 @@
+---
+layout: compress
+---
+{% assign layout = 'default' %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+{% include head.html %}
+
+<body onload="initPage(false)" id="page-top" data-spy="scroll" data-target=".fixed-top">
+
+{% include navbar.html %}
+
+<section id="header"     class="container">{% include header.html %}    </section>
+<section id="about"      class="container">{% include about.html %}     </section>
+<section id="services"   class="container">{% include services.html %}  </section>
+<section id="opensource" class="container">{% include opensource.html %}</section>
+<section id="team"       class="container">{% include team.html %}      </section>
+<section id="contact"    class="container">{% include contact.html %}   </section>
+
+{% include footer.html %}
+
+{% include scripts-3rdp.html %}
+{% include scripts.html %}
+
+</body>
+</html>

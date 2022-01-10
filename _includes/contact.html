@@ -1,0 +1,47 @@
+{% assign contact = site.data.contact %}
+
+<div class="row text-center">
+  <div class="col-12">
+    <h1>{{ contact.heading[page.lang] }}</h1>
+    <p class="lead">{{ contact.lead[page.lang] | escape }}</p>
+  </div>
+</div>
+{% assign sep = '&ensp;|&ensp;' %}
+<div class="row">
+  <div class="col-lg-4 offset-lg-0 col-10 offset-1 text-left mt-2 order-2 order-lg-1">
+    <p>
+      {{ contact.phone_label[page.lang] }}{{ sep }}<a href="tel:{{ contact.phone[page.lang] | replace : ' ', '' }}">{{ contact.phone[page.lang] }}</a><br>
+      {{ contact.email_label[page.lang] }}{{ sep }}<a href="mailto:{{ contact.email[page.lang] }}">{{ contact.email[page.lang] }}</a><br>
+      <a href="{{ contact.vcard }}">{{ contact.vcard_label[page.lang] }}</a><br>
+      <br>
+      {{ contact.register[page.lang] }}<br>
+      {{ contact.vatno[page.lang] }}<br>
+      {{ contact.managing_director_label[page.lang] }}{{ sep }}{{ contact.managing_director }}
+    </p>
+  </div>
+  <div class="col-lg-4 offset-lg-0 col-10 offset-1 text-center order-1 order-lg-2">
+      <p class="d-none d-lg-block mb-3">{% assign svg_alt = "color" %}{% assign svg_src = contact.logo %}{% include svg.html %}</p>
+      <address>
+        {{ contact.company }}<br>
+        {{ contact.street }}<br>
+        {{ contact.postal }} {{ contact.city }}, {{ contact.country[page.lang] }}<br>
+        <a href="{{ contact.location }}" target="_blank"><i class="icon-location"></i> {{ contact.location_reference[page.lang] }}</a><br>
+      </address>
+    </div>
+  <div class="col-lg-4 offset-lg-0 col-10 offset-1 text-right mt-2 order-3">
+    <p>
+      News{{ sep }}<a href="{{ contact.news[page.lang] }}">{{ contact.news[page.lang] | remove_first: "https://" }}</a><br>
+      Blog{{ sep }}<a href="{{ contact.blog[page.lang] }}">{{ contact.blog[page.lang] | remove_first: "https://" }}</a><br>
+      <br>
+      {% for w in contact.web %}
+        <small>{{ w.label }}{{ sep }}{% if w.urllang %}
+          {% assign url = w.urllang[page.lang] %}
+        {% else %}
+          {% assign url = w.url %}
+        {% endif %}
+        <a href="{{ url }}" target="_blank">{{ url | remove_first: "https://" }}</a></small><br>
+      {% endfor %}
+      <br>
+    </p>
+  </div>
+</div>

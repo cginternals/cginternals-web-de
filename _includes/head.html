@@ -1,0 +1,28 @@
+<head>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="{{ site.encoding }}">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title}}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="author" content="{{ site.author }}">
+  <meta name="description" content="{{ page.description }}"> {% if site.baseurl <> '/' %}
+  <meta name="robots" content="noindex"> {% else %}
+  <meta name="robots" content="index, follow"> {% endif %}
+
+  <link rel="shortcut icon" href="{{ site.baseurl }}/img/cginternals.ico">
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html', '' | prepend: site.baseurl | prepend: site.url }}"> {% if page.layout == 'press' %}
+  <link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/{{ page.lang }}/feed.xml" /> {% else %}
+  <link rel="home" type="application/rss+xml" href="{{ site.baseurl }}/{{ page.lang }}/feed.xml" /> {% endif %}
+
+  <noscript>
+    <style>
+      .js-only {
+        display: none;
+      }
+    </style>
+  </noscript>
+
+</head>

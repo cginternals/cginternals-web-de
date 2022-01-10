@@ -1,0 +1,74 @@
+nav: 
+  en: Team
+  de: Team
+heading: 
+  en: Executive and Technical Leadership
+  de: Technische und Organisatorische Leitung
+lead: 
+  en: 'CG Internals is steered by three computer graphics enthusiasts, software engineers, and visualization experts.'
+  de: 'CG Internals wird von drei Computergrafikenthusiasten, Softwareingenieuren und Visualisierungsexperten geführt.'
+
+founders:
+  - last_name: Buschmann
+    first_name: Stefan
+    text: 
+      en: Unix native and knowledgeable developer of complex systems. With over 15 years of experience in developing game and rendering engines, Stefan drives quality and reliable technology design.
+      de: Unix beheimateter, kenntnisreicher Entwickler komplexer Systeme der mit über 15 Jahren Erfahrung im Entwickeln von Rendering Engines Qualität und verlässliches Technologiedesign liefert.
+    portrait: stefan-buschmann
+    email: 
+      en: stefan.buschmann@cginternals.com
+      de: stefan.buschmann@cginternals.de
+    github: sbusch42
+    website: 
+      en: https://www.stefanbuschmann.de/index_en.html
+      de: https://www.stefanbuschmann.de
+
+  - last_name: Limberger
+    first_name: Daniel
+    text: 
+      en: Restless Windows aficionado who dedicated the majority of his last 15 years to GPUs and pixels. Daniel ruthlessly strives for algorithms of minimal code and highest possible performance.
+      de: Ruheloser Windowsaficionado der den Großteil der letzten 15 Jahre mit GPUs und Pixeln verbracht hat und rücksichtslos nach Algorithmen minimalen Codes und höchstmöglicher Leistung strebt.
+    portrait: daniel-limberger
+    email: 
+      en: daniel.limberger@cginternals.com
+      de: daniel.limberger@cginternals.de
+    github: cgcostume
+    website: 
+      en: http://www.daniellimberger.de/en
+      de: http://www.daniellimberger.de/de
+    linkedin: daniellimberger
+
+  - last_name: Scheibel
+    first_name: Willy
+    text: 
+      en: Pragmatic programmer, modern C++ specialist, and specification guru who maintains massive amounts of source code and pushes features both with a vertiginous momentum.
+      de: Pragmatischer Programmierer, Spezialist für modernes C++ und Spezifikationsguru der enorme Mengen an Quellcode wartet und Features in schwindelerregender Dynamik implementiert.
+    portrait: willy-scheibel
+    email: 
+      en: willy.scheibel@cginternals.com
+      de: willy.scheibel@cginternals.de
+    github: scheibel
+    website: 
+      en: http://www.willyscheibel.de
+      de: http://www.willyscheibel.de
+    linkedin: willyscheibel
+
+web_tooltip: 
+  en: Visit <first_name>'s personal website
+  de: Besuche <first_name>s persönliche Website
+
+email_tooltip: 
+  en: Send <first_name> an E-Mail
+  de: Schreibe <first_name> eine E-Mail
+
+twitter_tooltip: 
+  en: See what <first_name> is tweeting about
+  de: Schau nach worüber <first_name> twittert
+
+linkedin_tooltip: 
+  en: Open <first_name>'s LinkedIn profile
+  de: Öffne <first_name>s LinkedIn Profil
+
+github_tooltip: 
+  en: See <first_name>'s open source activities
+  de: Schaue nach <first_name>s Open-Source Aktivitäten

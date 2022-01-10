@@ -1,0 +1,75 @@
+nav:
+  en: Contact
+  de: Kontakt
+heading:
+  en: Contact and Imprint
+  de: Kontakt und Impressum
+
+lead:
+  en: Feel free to get in contact with us.
+  de: Bei Fragen stehen wir ihnen gern zur Seite.
+
+logo: cginternals_logo_header
+
+company: CG Internals GmbH
+street: Rudolf-Breitscheid-Straße 36
+postal: 14482
+city: Potsdam
+country:
+  en: Germany
+  de: Deutschland
+
+location: https://www.google.de/maps/place/52%C2%B023'30.8%22N+13%C2%B005'32.9%22E/@52.391885,13.0919258,19z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d52.3918852!4d13.0924731
+location_reference:
+  en: Show in Google Maps
+  de: In Google Maps anzeigen
+
+managing_director: Daniel Limberger
+managing_director_label:
+  en: Managing Director
+  de: Geschäftsführer
+
+vcard: /vcard.vcf
+vcard_label:
+  en: Download vCard
+  de: vCard herunterladen
+
+phone:
+  en: +49 163 568 2818
+  de: +49 163 568 2818
+phone_label:
+  en: Phone
+  de: Telefon
+
+email:
+  en: contact@cginternals.com
+  de: kontakt@cginternals.de
+email_label:
+  en: E-Mail
+  de: E-Mail
+
+register:
+  en: District Court Potsdam, HRB 28335 P
+  de: Amtsgericht Potsdam, HRB 28335 P
+vatno:
+  en: 'VAT-No: DE815590546'
+  de: 'USt-IdNr.: DE815590546'
+
+news:
+  en: https://cginternals.gmbh/en/press
+  de: https://cginternals.gmbh/de/press
+
+blog:
+  en: https://cginternals.gmbh/en/blog
+  de: https://cginternals.gmbh/de/blog
+
+web:
+  - label: GitHub
+    url: https://github.com/cginternals
+  - label: YouTube
+    url: https://youtube.com/channel/UCapBWGSleTuXtAn4SwDp-8A
+  - label: Twitter
+    url: https://twitter.com/cginternals 
+  - label: Linkedin
+    url: https://linkedin.com/company/cg-internals
+    

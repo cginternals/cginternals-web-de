@@ -1,0 +1,35 @@
+---
+layout: compress 
+---
+{% assign layout = 'privacy-policy' %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+{% include head.html %}
+
+<body>
+
+{% include navbar.html %}
+
+<section id="privacy-policy" class="container">
+
+  <div class="row">
+    <div class="col-xs-12 col-lg-8 offset-lg-2">
+      {% if page.lang == 'de' %}
+        {% capture policy %}{% include dsgvo.md %}{% endcapture %}
+      {% elsif page.lang == 'en' %}
+        {% capture policy %}{% include gdpr.md %}{% endcapture %}
+      {% endif %}
+      {{ policy | markdownify }}
+    </div>
+  </div>
+
+</section>
+
+{% include footer.html %}
+
+{% include scripts-3rdp.html %}
+
+</body>
+</html>

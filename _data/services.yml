@@ -1,0 +1,58 @@
+nav: 
+  en: Services
+  de: Services
+heading: 
+  en: What We Offer
+  de: Was Wir Bieten
+lead: 
+  en: With reliable technology and innovative concepts we support and help realize your projects.
+  de: Mit verlässlicher Technologie und innovativen Konzepten unterstützen wir die Umsetzung ihrer Projekte.
+
+services:
+  - title:
+      en: Support
+      de: Support
+    text:
+      en: Our support is intended as short-termed work aiding your project or process. Among others this includes answering technical questions, resolving smaller issues as well as prioritized feature development in our open source software stack. 
+      de: Unser Support umfasst kurzfristige Leistungen zur Beihilfe in Projekten und Prozessen. Darunter fällt u. a. die Beantwortung technischer Fachfragen, die Behebung kleinerer Probleme und die Priorisierung der Weiterentwicklung unserer Open-Source Software.
+    stock: service-support
+    # price-tag: 
+    #   en: 200&euro; per Hour
+    #   de: 200&euro; pro Stunde
+    cta:
+      en: Request Support
+      de: Support Anfragen
+    cta-mailto: support@cginternals.com
+    cta-icon: bug
+
+  - title:
+      en: Consulting
+      de: Consulting
+    text:
+      en: We guide decision-making processes and extend resources based on your needs. For it we offer researching, benchmarking, developing algorithms, and rapidly constructing prototypes. In addition we provide basic and advanced training.
+      de: Wir betreuen Entscheidungsfindungsprozesse und stellen Resourcen nach Bedarf bereit. Dazu bieten wir Forschung, Benchmarking, Algorithmenentwicklung sowie rasche Prototypenerstellung an. Zudem bieten wir Grundlagen- und Fachschulungen.
+    stock: service-consulting
+    # price-tag: 
+    #   en: Time and Materials
+    #   de: Zeit und Material
+    cta:
+      en: Request Quote
+      de: Angebot Anfragen
+    cta-mailto: consulting@cginternals.com
+    cta-icon: puzzle
+
+  - title:
+      en: Development
+      de: Softwareentwicklung
+    text:
+      en: In a transparent and agile process we implement novel functionality, build and integrate advanced tools, and transition research into production. This covers small-scale investigatory efforts up to large-scale industry applications and systems.
+      de: In einem transparenten und agilen Prozess enwickeln wir neue Funkionalität, bauen und integrieren fortschrittliche Tools und überführen Forschung in Produkte. Dies umfasst kleine Projekte bis hin zu groß angelegten Industrieanwendungen und -systemen.
+    stock: service-development
+    # price-tag: 
+    #   en: Time and Materials
+    #   de: Zeit und Material
+    cta:
+      en: Schedule Meeting
+      de: Termin Vereinbaren
+    cta-mailto: development@cginternals.com
+    cta-icon: rocket

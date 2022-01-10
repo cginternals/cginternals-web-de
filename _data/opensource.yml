@@ -1,0 +1,106 @@
+nav:
+  en: Open-Source
+  de: Open Source
+
+nav_overview:
+  en: Overview
+  de: Übersicht
+
+heading:
+  en: Open-Source Commitment
+  de: Open Source Engagement
+lead:
+  en: For us, open and free access to knowledge and technology is obligatory.
+  de: Offener und freier Zugang zu Wissen und Technologie ist für uns unerlässlich.
+
+text:
+  en: Refer to our GitHub portfolio at <a href='https://github.com/cginternals' target='_blank'>github.com/cginternals</a> for a comprehensive list of projects and additional information.
+  de: Für eine umfassende Liste der Projekte sowie zusätzlichen Informationen besuchen sie unser GitHub Portfolio unter <a href='https://github.com/cginternals' target='_blank'>github.com/cginternals</a>.
+
+href_text:
+  en: More Information
+  de: Weitere Informationen
+
+projects: [ glbinding, globjects, gloperate, glkernel,
+            cppassist, cppexpose, cppfs, cpplocate,
+            cmake-init, guidelines, typescript-init, qml-toolbox,
+            glraw, glisdeprecated, glhimmel, openll ]
+
+glbinding:
+  thumbnail: project-logo-glbinding
+  title: gl<strong>binding</strong>
+  href: https://glbinding.org
+
+globjects:
+  thumbnail: project-logo-globjects
+  title: gl<strong>objects</strong>
+  href: https://globjects.org
+
+gloperate:
+  thumbnail: project-logo-gloperate
+  title: gl<strong>operate</strong>
+  href: https://github.com/cginternals/gloperate
+
+
+cmake-init:
+  title: cmake-<strong>init</strong>
+  href: https://github.com/cginternals/cmake-init
+
+guidelines:
+  title: dev <strong>guidelines</strong>
+  href: https://github.com/cginternals/guidelines
+
+qml-toolbox:
+  title: qml <strong>toolbox</strong>
+  href: https://github.com/cginternals/qmltoolbox
+
+
+glraw:
+  thumbnail: project-logo-glraw
+  title: gl<strong>raw</strong>
+  href: https://github.com/cginternals/glraw
+
+glkernel:
+  thumbnail: project-logo-glkernel
+  title: gl<strong>kernel</strong>
+  href: https://github.com/cginternals/glkernel
+
+
+cppassist:
+  thumbnail: project-logo-cppassist
+  title: cpp<strong>assist</strong>
+  href: https://github.com/cginternals/cppassist
+
+cppexpose:
+  thumbnail: project-logo-cppexpose
+  title: cpp<strong>expose</strong>
+  href: https://github.com/cginternals/cppexpose
+
+cppfs:
+  thumbnail: project-logo-cppfs
+  title: cpp<strong>fs</strong>
+  href: https://github.com/cginternals/cppfs
+
+cpplocate:
+  thumbnail: project-logo-cpplocate
+  title: cpp<strong>locate</strong>
+  href: https://github.com/cginternals/cpplocate
+
+
+typescript-init:
+  title: typescript-<strong>init</strong>
+  href: https://github.com/cginternals/typescript-init
+
+glhimmel:
+  thumbnail: project-logo-glhimmel
+  title: gl<strong>himmel</strong>
+  href: https://github.com/cginternals/glhimmel
+
+openll:
+  title: open<strong>ll</strong>
+  href: https://github.com/cginternals/openll
+
+glisdeprecated:
+  thumbnail: project-logo-glisdeprecated
+  title: gl<strong>isdeprecated</strong>
+  href: https://github.com/cginternals/glisdeprecated

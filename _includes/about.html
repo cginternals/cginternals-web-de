@@ -1,0 +1,52 @@
+{% assign about = site.data.about %}
+
+<div class="row text-center">
+  <div class="col-12">
+    <h1>{{ about.heading[page.lang] | escape }}</h1>
+    <p class="lead">{{ about.lead[page.lang] | escape }}</p>
+  </div>
+</div>
+
+<div class="row">
+
+  {% assign service = about.core_rcg %}
+  <div class="col-lg-3 offset-lg-1 col-md-4 offset-md-0 col-10 offset-1">
+    <div class="center-block mb-4">
+      {% assign svg_alt = service.image %}
+      {% assign svg_src = service.image %}
+      {% include svg.html %}
+    </div>
+  </div>
+  <div class="col-md-6 offset-md-0 col-10 offset-1">
+    <h4>{{ service.heading[page.lang] | escape }}</h4>
+    <p>{{ service.text[page.lang] | escape }}</p>
+    <ul>
+      {% for skill in service.skills[page.lang] %}
+      <li>{{ skill | escape }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</div>
+
+<div class="row mt-4">
+
+  {% assign service = about.core_cpp %}
+  <div class="col-lg-3 offset-lg-1 col-md-4 offset-md-0 col-10 offset-1">
+    <div class="center-block mb-4">
+      {% assign svg_alt = service.image %}
+      {% assign svg_src = service.image %}
+      {% include svg.html %}
+    </div>
+  </div>
+  <div class="col-md-6 offset-md-0 col-10 offset-1">
+    <h4>{{ service.heading[page.lang] | escape }}</h4>
+    <p>{{ service.text[page.lang] | escape }}</p>
+    <ul>
+      {% for skill in service.skills[page.lang] %}
+      <li>{{ skill | escape }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</div>

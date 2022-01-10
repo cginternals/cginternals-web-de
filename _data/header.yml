@@ -1,0 +1,18 @@
+heading:
+  en: R&D services for real-time computer graphics and C++
+  de: F+E Dienstleistungen für Echtzeit-Computergrafik und C++
+
+cta: 
+  services:
+    en: Services
+    de: Services
+  contact:
+    en: Get in Touch
+    de: Kontakt aufnehmen
+
+lead:
+  en: From low-level graphics applications to state-of-the-art rendering systems and cross-platform solutions:<br>We offer genuine computer graphics and C++ know-how, research, and software development.
+  de: Von treibernahen Grafikanwendungen bis hochmodernen Renderingsystemen und cross-platform Lösungen:<br>Wir bieten Computergrafik und C++ Fachwissen, Forschung und Softwaresystementwicklung.
+
+showcase: [ vis-sunburst, ccg-terrain, vis-softwaremap, ccg-imrod-bokeh, ccg-swmaps-whitecity, ccg-himmel-nightsky  ]
+

@@ -1,0 +1,48 @@
+---
+layout: compress
+--- 
+
+{% assign layout = 'press-post' %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+{% include head.html %}
+
+<body id="page-top">
+
+  {% include navbar.html %} 
+  {% assign meta = site.data.posts %}
+
+  {% assign m = page.date | date: "%-m" | minus: 1 %} 
+  {% assign day = page.date | date: "%d" %} 
+  {% assign month = months[m] %} 
+  {% assign year = page.date | date: "%Y" %} 
+
+  {% assign author = meta.authors[page.author] %}
+  {% capture author_name %}{{ author.first_name }} {{ author.last_name }}{% endcapture %}
+  {% capture date_published %}{{ day }}. {{ meta.months[page.lang][m] }} {{ year }}{% endcapture %}
+
+  <section id="entry" class="container">
+
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-10 offset-1">
+        <h1 class="mb-3">{{ page.title }}</h1>
+        {{ content }}
+      </div>
+    </div>
+
+    <div class="row mt-0">
+      <div class="col-lg-8 offset-lg-2 col-10 offset-1">
+        <hr>
+        <p>{{ meta.pressrelease[page.lang] }} {{ meta.post_by[page.lang] }} <a href="mailto:{{ author.email[page.lang] }}">{{ author_name }}</a>, {{ date_published }}.</p>
+      </div>
+    </div>  
+
+  </section>
+
+  {% include footer.html %} {% include scripts-3rdp.html %}
+
+</body>
+
+</html>

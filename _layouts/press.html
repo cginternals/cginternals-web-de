@@ -1,0 +1,28 @@
+---
+layout: compress
+---
+{% assign layout = 'press' %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+{% include head.html %}
+
+<body id="page-top">
+
+{% include navbar.html %}
+
+<section id="posts" class="container">
+	{% include press-posts.html %}
+</section>
+
+<section id="press-material" class="container">
+	{% include press-material.html %}	
+</section>
+
+{% include footer.html %}
+
+{% include scripts-3rdp.html %}
+
+</body>
+</html>

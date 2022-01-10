@@ -1,0 +1,35 @@
+{% assign opensource = site.data.opensource %}
+
+<div class="row text-center">
+  <div class="col-12">
+    <h1>{{ opensource.heading[page.lang] | escape }}</h1>
+    <p class="lead">{{ opensource.lead[page.lang] | escape }}</p>
+  </div>
+</div>
+
+<hr>
+
+{% assign projects = opensource.projects %}
+<div class="row">
+  {% for project_name in projects %}
+  <div class="project col-md-3 offset-md-0 col-10 offset-1">
+  {% assign project = opensource[project_name] %}
+    <p class="lead text-center"><a href="{{ project.href }}" target="_blank">
+    {% if project.thumbnail %}
+      {% assign svg_alt = project.plain %}
+      {% assign svg_src = project.thumbnail %}
+      {% include svg.html %}
+    {% else %}
+      {{ project.title }}
+    {% endif %}</a></p>
+  </div>
+  {% endfor %}
+</div>
+
+<hr>
+
+<div class="row text-center">
+  <div class="col-10 offset-1">
+    <p>{{ opensource.text[page.lang] }}</p>
+  </div>
+</div>

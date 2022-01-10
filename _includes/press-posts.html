@@ -1,0 +1,20 @@
+{% assign meta = site.data.posts %}
+
+<div class="row text-center">
+  <div class="col-lg-8 offset-lg-2 col-10 offset-1">
+    <h1>{{ meta.press.heading[page.lang] | escape }}</h1>
+    {% capture atom %}<a rel="alternate" type="application/atom+xml" href="{{ site.baseurl }}/{{ page.lang }}/atom/press-feed.xml"><i class="icon-rss"></i>{% endcapture %}
+    {% capture rss %}<a rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/{{ page.lang }}/rss/press-feed.xml"><i class="icon-rss"></i>{% endcapture %}
+    <p class="lead">{{ meta.press.lead[page.lang] | replace: '<atom>', atom | replace: '</atom>', '</a>' | replace: '<rss>', rss | replace: '</rss>', '</a>' }}</p>
+  </div>
+</div>
+
+{% assign page_baseurl = site.baseurl %}
+{% for post in site.posts %} {% if post.lang == page.lang and post.layout == 'press-post' %}
+<div class="row my-2">
+  <div class="col-lg-8 offset-lg-2 col-10 offset-1">
+    <h4>{{ post.date | date: meta.date_format[page.lang] }}<span class="d-none d-sm-inline">&ensp;|&ensp;</span><div class="d-block d-sm-none"></div><a href="{{ page_baseurl }}{{ post.url }}">{{ post.title | escape }}</a></h4>
+    <p>{{ post.content | strip_html | truncatewords:38, ' &hellip; ' }}<a href="{{ page_baseurl }}{{ post.url }}">{{ meta.read_more[page.lang] }}</a></p>
+  </div>  
+</div>
+{% endif %} {% endfor %}

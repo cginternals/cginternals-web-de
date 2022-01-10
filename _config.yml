@@ -1,0 +1,68 @@
+# Site settings
+timezone: Europe/Berlin
+
+baseurl: '' # the subpath of your site, e.g. '' or '/staging'
+url: 'https://www.cginternals.de' # the base hostname & protocol for your site
+
+title: 'CG Internals'
+author: 'CG Internals, Potsdam, Germany'
+
+google_font_sans_serif: 'Source+Sans+Pro:600,300'
+google_font_monospace: 'Source+Code+Pro:400'
+
+# Handling Reading
+safe: true
+encoding: utf-8
+
+# Conversion
+#gems: [ redcarpet ]
+# Make redcarpet behave like GitHub Flavored Markdown 
+  #extensions: [ "tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks", "no_intra_emphasis", "superscript" ]
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Outputting
+exclude: [
+  '.htpasswd',
+  '_assets',
+  'node_modules',
+  'gitrev.js',
+  'package.json',
+  'rawup.js',
+  'README.md',
+  'setup.bat',
+  'uncssmin.js',
+  'update.bat',
+  'update.sh',
+  'update.m03p.sh',
+  'vendor']
+
+include: [
+  '.htaccess']
+
+defaults:
+  - scope:
+      path: ''
+    values: 
+      lang: en
+
+  - scope:
+      path: _posts/blog-en
+    values:
+      lang: en
+      permalink: en/blog/:year-:month-:day-:title.html
+
+  - scope:
+      path: _posts/press-en
+    values:
+      lang: en
+      permalink: en/press/:year-:month-:day-:title.html
+
+# CSS Minification
+sass:
+  style: compressed

@@ -1,0 +1,36 @@
+---
+layout: compress
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  {% assign meta = site.data.posts %}
+
+  <channel>
+    <title>{{ site.title | xml_escape }} | {% if page.context %}{{ meta[page.context].heading[page.lang] | escape }}{% else %}{{ meta.heading[page.lang] | escape }}{% endif %}</title>
+    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
+    <link>{{ site.url }}{{ page.url }}</link>
+    <pubDate>{{ "now" | date_to_rfc822 }}</pubDate>
+  
+  {% assign post_layout_filter = page.context | append: '-post' %} 
+  {% for post in site.posts %}  
+  
+    {% if post.url and post.lang == page.lang %}
+    {% unless page.context and post.layout != post_layout_filter %}
+    
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <guid>{{ site.url }}{{ post.url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+
+      {% if post.author %}
+      {% assign author = meta.authors[post.author] %}
+      <author>{{ author.email[page.lang] }} ({{ author.first_name }} {{ author.last_name }})</author>
+      {% endif %}
+
+      <description><![CDATA[{{ post.content }}]]></description>
+      
+    </item>
+    {% endunless %} {% endif %} {% endfor %}
+  </channel>
+</rss>

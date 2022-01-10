@@ -1,0 +1,42 @@
+{% assign team = site.data.team %}
+
+<div class="row text-center">
+    <div class="col-12">
+    <h1>{{ team.heading[page.lang] | escape }}</h1>
+    <p class="lead">{{ team.lead[page.lang] | escape }}</p>
+  </div>
+</div>
+
+<div class="row">
+
+  {% for f in team.founders %}
+  <div class="col-md-4 offset-md-0 col-10 offset-1">
+
+    <figure class="figure">
+      <img class="figure-img img-fluid" src="{{ site.baseurl }}/img/{{ f.portrait }}.min.png" alt="{{ f.name }} Portrait">
+      <figcaption class="figure-caption text-right">{{ f.first_name }} {{ f.last_name }}</figcaption>
+    </figure>
+
+    <p>
+      {{ f.text[page.lang] }}
+    </p>
+
+    <ul class="list-unstyled">
+      {% if f.website %}
+      <li><small>
+        <a href="{{ f.website[page.lang] }}" target="_blank">
+          <i class="icon-globe"></i>&thinsp;{{ team.web_tooltip[page.lang] | replace: '<first_name>', f.first_name }}
+        </a></small>
+      </li>
+      {% endif %}
+      <li><small>
+        <a href="mailto:{{ f.email[page.lang] }}">
+          <i class="icon-mail"></i>&thinsp;{{ team.email_tooltip[page.lang] | replace: '<first_name>', f.first_name }}
+        </a></small>
+      </li>
+    </ul>
+
+  </div>
+  {% endfor %}
+
+</div>

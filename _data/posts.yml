@@ -1,0 +1,79 @@
+
+date_format:
+  en: "%m/%d/%y"
+  de: "%d.%m.%y"
+
+heading:
+  en: News
+  de: Nachrichten
+
+blog:
+  nav:
+    en: Blog
+    de: Blog
+  heading: 
+    en: Blog Posts
+    de: Blog Einträge
+  lead: 
+    en: All blog entries are also available as <atom>Atom feed</atom> and <rss>RSS feed</rss>.
+    de: Alle Blogeinträge sind auch als <atom>Atom Feed</atom> und <rss>RSS Feed</rss> verfügbar.
+
+press: 
+  nav: 
+    en: News
+    de: News
+  heading: 
+    en: Press Releases
+    de: Pressemitteilungen
+  lead: 
+    en: All press releases are also available as  <atom>Atom feed</atom> and <rss>RSS feed</rss>.
+    de: Alle Pressemitteilungen sind auch als <atom>Atom Feed</atom> und <rss>RSS Feed</rss> verfügbar.
+
+months: 
+  en: [ January, February, March, April, May, June, July, August, September, October, November, December ]
+  de: [ Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember, ]
+
+blogentry: 
+  en: Blog Post
+
+pressrelease: 
+  en: Press Release
+  de: Pressemitteilung
+
+read_more: 
+  en: read more
+  de: weiterlesen
+
+post_by:
+  en: created by
+  de: erstellt von
+
+authors: 
+
+  carolin: 
+    last_name: Fiedler
+    first_name: Carolin
+    email: 
+      en: carolin.fiedler@cginternals.com
+      de: carolin.fiedler@cginternals.de
+
+  daniel: 
+    last_name: Limberger
+    first_name: Daniel
+    email: 
+      en: daniel.limberger@cginternals.com
+      de: daniel.limberger@cginternals.de
+
+  stefan: 
+    last_name: Buschmann
+    first_name: Stefan
+    email: 
+      en: stefan.buschmann@cginternals.com
+      de: stefan.buschmann@cginternals.de
+
+  willy: 
+    last_name: Scheibel
+    first_name: Willy
+    email: 
+      en: willy.scheibel@cginternals.com
+      de: willy.scheibel@cginternals.de
