@@ -34,8 +34,8 @@ founders:
       de: daniel.limberger@cginternals.de
     github: cgcostume
     website: 
-      en: http://www.daniellimberger.de/en
-      de: http://www.daniellimberger.de/de
+      en: https://daniellimberger.de/
+      de: https://daniellimberger.de/
     linkedin: daniellimberger
 
   - last_name: Scheibel
@@ -49,8 +49,8 @@ founders:
       de: willy.scheibel@cginternals.de
     github: scheibel
     website: 
-      en: http://www.willyscheibel.de
-      de: http://www.willyscheibel.de
+      en: https://www.willyscheibel.de/
+      de: https://www.willyscheibel.de/
     linkedin: willyscheibel
 
 web_tooltip: 

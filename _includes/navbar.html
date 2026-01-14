@@ -1,9 +1,9 @@
 {% capture page_lang_lc %}{{ page.lang | downcase | append: '/' }}{% endcapture %} 
-{% capture blog_url %}{{ site.baseurl }}/{{ page.lang }}/blog/{% endcapture %} 
-{% capture press_url %}{{ site.baseurl }}/{{ page.lang }}/press/{% endcapture %} 
+{% capture blog_url %}{{ site.baseurl }}/en/blog/{% endcapture %} 
+{% capture press_url %}{{ site.baseurl }}/en/press/{% endcapture %} 
 {% if layout != 'default' %}
   {% capture index_url %}{{ site.baseurl }}/{% endcapture %} 
-  {% capture base_url %}{{ site.baseurl }}/{{ page.lang}}/{% endcapture %} 
+  {% capture base_url %}{{ site.baseurl }}/{% endcapture %} 
 {% endif %}
 {% if layout == 'press' %}
   {% assign press_url = '#' %}

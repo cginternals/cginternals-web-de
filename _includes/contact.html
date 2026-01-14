@@ -10,22 +10,14 @@
 <div class="row">
   <div class="col-lg-4 offset-lg-0 col-10 offset-1 text-left mt-2 order-2 order-lg-1">
     <p>
-      {{ contact.phone_label[page.lang] }}{{ sep }}<a href="tel:{{ contact.phone[page.lang] | replace : ' ', '' }}">{{ contact.phone[page.lang] }}</a><br>
-      {{ contact.email_label[page.lang] }}{{ sep }}<a href="mailto:{{ contact.email[page.lang] }}">{{ contact.email[page.lang] }}</a><br>
-      <a href="{{ contact.vcard }}">{{ contact.vcard_label[page.lang] }}</a><br>
-      <br>
-      {{ contact.register[page.lang] }}<br>
-      {{ contact.vatno[page.lang] }}<br>
-      {{ contact.managing_director_label[page.lang] }}{{ sep }}{{ contact.managing_director }}
+      {{ contact.email_label[page.lang] }}{{ sep }}<a href="mailto:{{ contact.email[page.lang] }}">{{ contact.email[page.lang] }}</a>
     </p>
   </div>
   <div class="col-lg-4 offset-lg-0 col-10 offset-1 text-center order-1 order-lg-2">
       <p class="d-none d-lg-block mb-3">{% assign svg_alt = "color" %}{% assign svg_src = contact.logo %}{% include svg.html %}</p>
       <address>
-        {{ contact.company }}<br>
-        {{ contact.street }}<br>
-        {{ contact.postal }} {{ contact.city }}, {{ contact.country[page.lang] }}<br>
-        <a href="{{ contact.location }}" target="_blank"><i class="icon-location"></i> {{ contact.location_reference[page.lang] }}</a><br>
+        {{ contact.organization }}<br>
+        {{ contact.city }}, {{ contact.country[page.lang] }}
       </address>
     </div>
   <div class="col-lg-4 offset-lg-0 col-10 offset-1 text-right mt-2 order-3">
